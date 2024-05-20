@@ -1,0 +1,175 @@
+@import url('fonts.css');
+/* Estilos del body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de la sección de inicio */
+section#inicio {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilos para la sección de proyectos */
+section#proyectos {
+  background-color: #040404;
+  padding: 20px;
+}
+
+/* Estilos para los títulos de los proyectos */
+h2.proyecto-titulo {
+  color: #9eff00;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los nombres de los proyectos */
+h3.proyecto-nombre {
+  color: #9eff00;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las descripciones de los proyectos */
+p.proyecto-descripcion {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes de los proyectos */
+img.proyecto-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de Skills */
+
+.bg-dark-700 {
+  background-color: #000000; /* Color de fondo oscuro */
+  padding: 4rem 0; /* Espaciado interno superior e inferior */
+}
+
+.bg-cover {
+  background-size: auto 100%; /* Ajustar la imagen al tamaño original */
+}
+
+.bg-center {
+  background-position: center; /* Centrar la imagen */
+}
+
+.container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+  padding: 0 1rem; /* Espaciado interno en los lados */
+}
+
+.text-lime-300 {
+  color: #84CC16; /* Color del texto (lima) */
+}
+
+.text-lime-200 {
+  color: #A7F3D0; /* Color del texto más claro (lima) */
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* Tamaño del texto grande */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* Tamaño del texto aún más grande */
+}
+
+.font-bold {
+  font-weight: bold; /* Fuente en negrita */
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em; /* Espaciado entre letras ajustado */
+}
+
+.py-16 {
+  padding-top: 4rem; /* Espaciado superior grande */
+  padding-bottom: 4rem; /* Espaciado inferior grande */
+}
+
+.px-4 {
+  padding-left: 1rem; /* Espaciado izquierdo */
+  padding-right: 1rem; /* Espaciado derecho */
+}
+
+.mt-4 {
+  margin-top: 1rem; /* Margen superior */
+}
+
+.max-w-3xl {
+  max-width: 48rem; /* Ancho máximo del contenedor interno */
+}
+
+.mx-auto {
+  margin-left: auto; /* Margen izquierdo automático */
+  margin-right: auto; /* Margen derecho automático */
+}
+
+/* Estilos específicos para diferentes tamaños de pantalla */
+@media (min-width: 640px) {
+  .text-3xl {
+    font-size: 2rem; /* Tamaño del texto grande en pantallas más grandes */
+  }
+}
+
+@media (min-width: 768px) {
+  .py-16 {
+    padding-top: 6rem; /* Espaciado superior más grande en pantallas más grandes */
+    padding-bottom: 6rem; /* Espaciado inferior más grande en pantallas más grandes */
+  }
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Estilos para la sección #music-player */
+#music-player {
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+  
+}
+
+
+#music-player button {
+  /* Personaliza los estilos del botón aquí */
+  
+  background-color: #9eff00;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+#music-player button:hover {
+  background-color: #9eff00;
+}
+
