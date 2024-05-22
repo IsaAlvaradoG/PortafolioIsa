@@ -139,17 +139,6 @@ function enabledisable(element) {
   sectionOneObserver.observe(sectionOne);
 
 
-// Esta función redirecciona a una página específica al hacer clic en un botón
-function redirectToPage() {
-  window.location.href = 'https://github.com/martinagonz/Prueba1';
-}
-
-
-// Esta función abre el currículum al hacer clic en un botón
-function openCV() {
-  window.open('./data/CVweb.pdf', '_blank');
-}
-
 // Esta función se utiliza para habilitar o deshabilitar un elemento
 function enabledisable(element) {
   element.classList.toggle("ativo");
@@ -216,4 +205,20 @@ formularioContacto.addEventListener('submit', (event) => {
   // Limpiar el formulario (opcional)
   formularioContacto.reset();
 });
+// Redirecciones
+function redirectToApiPage() {
+  window.location.href = 'api.html';
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener el elemento <li> de Extension VivoDuoc
+  const vivoDuoc = document.getElementById("vivoDuoc");
+
+  // Agregar evento de clic al <li> de Extension VivoDuoc
+  vivoDuoc.addEventListener("click", function() {
+      // Redirigir a la página de Extension VivoDuoc
+      window.location.href = "https://miro.com/app/board/uXjVMizyVNs=/";
+  });
+
+  // Aquí puedes agregar eventos de clic similares para los otros proyectos
+});

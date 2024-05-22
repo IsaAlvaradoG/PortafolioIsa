@@ -1,9 +1,32 @@
 @import url('fonts.css');
+
 /* Estilos del body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+body {
+  background-color: black;
+}
+
+figure {
+  max-width: 70%;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.expanded {
+  display: block;
 }
 
 /* Estilos de la sección de inicio */
@@ -173,3 +196,67 @@ button {
   background-color: #9eff00;
 }
 
+/* Imagen de fondo fija */
+body {
+  background-image: url('../img/F1transparente.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilos para el título del pronóstico */
+#pronostico h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para la información del clima actual */
+#pronostico .clima-actual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+#pronostico .clima-actual img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+#pronostico .clima-actual span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estilos para la información del pronóstico diario */
+#pronostico .pronóstico-diario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#pronostico .dia {
+  width: calc(100% / 3);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#pronostico .dia h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#pronostico .dia img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+#pronostico .dia p {
+  margin: 0;
+}
