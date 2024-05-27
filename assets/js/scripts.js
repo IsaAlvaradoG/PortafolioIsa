@@ -1,63 +1,7 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ['./src/**/*.{html,js}'],
-    theme: {
-      colors: {
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
-      },
-      fontFamily: {
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-      },
-      extend: {
-        spacing: {
-          '8xl': '96rem',
-          '9xl': '128rem',
-        },
-        borderRadius: {
-          '4xl': '2rem',
-        }
-      }
-    },
-  }
-const defaultTheme = require('tailwindcss/defaultTheme')
-
-module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
-  // ...
-}
-// Selecciona el encabezado
-const header = document.querySelector('header');
-
-// Agrega un evento de desplazamiento
-window.addEventListener('scroll', () => {
-  // Verifica la posición de desplazamiento
-  if (window.scrollY > 100) {
-    // Si el desplazamiento es más de 100px, cambia el color de fondo del encabezado
-    header.classList.add('bg-gray-800');
-  } else {
-    // Si no, elimina el color de fondo del encabezado
-    header.classList.remove('bg-gray-800');
-  }
-});
 document.addEventListener("DOMContentLoaded", function() {
-    // Función para cambiar el color de fondo del encabezado al hacer scroll
-    const header = document.querySelector('header');
+  // Función para cambiar el color de fondo del encabezado al hacer scroll
+  const header = document.querySelector('header');
+  if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         header.classList.add('bg-gray-800');
@@ -65,160 +9,221 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.remove('bg-gray-800');
       }
     });
-  
-    // Función para mostrar/ocultar el menú móvil
-    const mobileMenuButton = document.querySelector('.lg:hidden button');
-    const mobileMenu = document.querySelector('.lg:hidden [role="dialog"]');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('block');
-    });
-  
-    // Función para cerrar el menú móvil al hacer clic en el fondo
-    const mobileMenuBackdrop = document.querySelector('.lg:hidden .fixed.inset-0');
-    mobileMenuBackdrop.addEventListener('click', () => {
-      mobileMenu.classList.remove('block');
-    });
-  
-    // Función para cambiar el color del botón al hacer clic
-    const getStartedButton = document.querySelector('.rounded-md.bg-green-600');
-    getStartedButton.addEventListener('click', () => {
-      getStartedButton.classList.remove('bg-green-600');
-      getStartedButton.classList.add('bg-lime-500');
-    });
-  
-    // Función para cambiar el color del texto al pasar el mouse
-    const learnMoreLink = document.querySelector('.text-sm.font-semibold.leading-6.text-white-500');
-    learnMoreLink.addEventListener('mouseenter', () => {
-      learnMoreLink.classList.add('text-green-500');
-    });
-    learnMoreLink.addEventListener('mouseleave', () => {
-      learnMoreLink.classList.remove('text-green-500');
-    });
-  
-    // Función para cargar imágenes de forma dinámica
-    const dynamicImage = document.querySelector('.dynamic-image');
-    dynamicImage.src = "https://unsplash.com/es/fotos/grayscale-photo-of-person-using-macbook-_UeY8aTI6d0";
-  });
-  // Eable Disable Script
-function enabledisable(element) {
-    console.log(element.style)
-    if (element.style.fill != "rgb(29, 185, 84)") {
-      element.style.setProperty('fill', '#1db954');
-    } else {
-      element.style.setProperty('fill', '#fff');
-    }
   }
-  
-  // Greeetngs Script
-  const greeting = document.getElementById("greeting");
-  const hour = new Date().getHours();
-  const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
-  let welcomeText = "";
-  
-  if (hour < 12) welcomeText = welcomeTypes[0];
-  else if (hour < 18) welcomeText = welcomeTypes[1];
-  else welcomeText = welcomeTypes[2];
-  
-  greeting.innerHTML = welcomeText;
-  
-  
-  
-  //Scrolling nav bar code
-  const nav=document.querySelector("#topNav");
-  const sectionOne=document.querySelector(".fw-bold");
-  const sectionOneOptions={};
-  const sectionOneObserver = new IntersectionObserver(function(entries , sectionOneObserver) {
-    entries.forEach(entry => {
-      if(!entry.isIntersecting){      
-        nav.style.backgroundColor="black";
-      } else{     
-        nav.style.backgroundColor="transparent";
+
+  // Event listener para el botón de Dino Game
+  const dinoGameBtn = document.getElementById('dinoGameBtn');
+  if (dinoGameBtn) {
+    dinoGameBtn.addEventListener('click', function() {
+      redirectToGitHub('https://github.com/IsaAlvaradoG/Dino-Game');
+    });
+  }
+
+  // Función para redirigir a GitHub
+  function redirectToGitHub(repoURL) {
+    console.log("Redireccionando a:", repoURL);
+    window.location.href = repoURL;
+  }
+
+
+  // Obtener el botón por su ID
+const groundZeroBtn = document.getElementById('groundZeroBtn');
+
+// Verificar si el botón existe
+if (groundZeroBtn) {
+  // Agregar event listener al botón
+  groundZeroBtn.addEventListener('click', function() {
+    redirectToGitHub('https://github.com/martinagonz/Prueba1');
+  });
+}
+
+// Obtener el botón por su ID
+const casinoStyleBtn = document.getElementById('casinoStyleBtn');
+
+// Verificar si el botón existe
+if (casinoStyleBtn) {
+  // Agregar event listener al botón
+  casinoStyleBtn.addEventListener('click', function() {
+    redirectToGitHub('https://github.com/IsaAlvaradoG/Perro-Salchicha');
+  });
+}
+
+// Obtener el botón por su ID
+const empresaDesignBtn = document.getElementById('empresaDesignBtn');
+
+// Verificar si el botón existe
+if (empresaDesignBtn) {
+  // Agregar event listener al botón
+  empresaDesignBtn.addEventListener('click', function() {
+    // Redirigir al enlace del trabajo en Google Drive
+    window.location.href = 'https://drive.google.com/drive/folders/1XdEmlhiWUjJjWcFj_YwTN882ofsB9rw9?usp=sharing';
+  });
+}
+
+// Obtener el botón por su ID
+const vivoDuocBtn = document.getElementById('vivoDuocBtn');
+
+// Verificar si el botón existe
+if (vivoDuocBtn) {
+  // Agregar event listener al botón
+  vivoDuocBtn.addEventListener('click', function() {
+    // Redirigir al enlace de Miro
+    window.location.href = 'https://miro.com/app/board/uXjVMizyVNs=/?share_link_id=195277841898';
+  });
+}
+
+
+ 
+// Obtener el botón por su ID
+const portafolioBtn = document.getElementById('portafolioBtn');
+
+// Verificar si el botón existe
+if (portafolioBtn) {
+  // Agregar event listener al botón
+  portafolioBtn.addEventListener('click', function() {
+    // Redirigir al enlace de Canva
+    window.location.href = 'https://www.canva.com/design/DAFXk2rGnRg/APr2BVWChRa4wQ1EQoGXlw/view?utm_content=DAFXk2rGnRg&utm_campaign=designshare&utm_medium=link&utm_source=editor';
+  });
+}
+
+// Obtener el botón por su ID
+const logosBtn = document.getElementById('logosBtn');
+
+// Verificar si el botón existe
+if (logosBtn) {
+  // Agregar event listener al botón
+  logosBtn.addEventListener('click', function() {
+    // Redirigir al enlace de Canva
+    window.location.href = 'https://www.canva.com/design/DAGFObgZ1UQ/OfafA_9Se9ALYo4muIIZrA/view?utm_content=DAGFObgZ1UQ&utm_campaign=designshare&utm_medium=link&utm_source=editor';
+  });
+}
+
+// Obtener el botón por su ID
+const curriculumBtn = document.getElementById('curriculumBtn');
+
+// Verificar si el botón existe
+if (curriculumBtn) {
+  // Agregar event listener al botón
+  curriculumBtn.addEventListener('click', function() {
+    // Redirigir al enlace de Canva
+    window.location.href = 'https://www.canva.com/design/DAF3P5SBtps/mLDCYvw3TeSsOIG_3eFZvQ/view?utm_content=DAF3P5SBtps&utm_campaign=designshare&utm_medium=link&utm_source=editor';
+  });
+}
+
+// Obtener el botón por su ID
+const instagramBtn = document.getElementById('instagramBtn');
+
+// Verificar si el botón existe
+if (instagramBtn) {
+  // Agregar event listener al botón
+  instagramBtn.addEventListener('click', function() {
+    // Redirigir al perfil de Instagram
+    window.location.href = 'https://www.instagram.com/isalvaradogonzali/';
+  });
+}
+
+// Obtener el botón por su ID
+const githubBtn = document.getElementById('githubBtn');
+
+// Verificar si el botón existe
+if (githubBtn) {
+  // Agregar event listener al botón
+  githubBtn.addEventListener('click', function() {
+    // Redirigir al perfil de GitHub
+    window.location.href = 'https://github.com/IsaAlvaradoG';
+  });
+}
+
+// Obtener el botón por su ID
+const linkedinBtn = document.getElementById('linkedinBtn');
+
+// Verificar si el botón existe
+if (linkedinBtn) {
+  // Agregar event listener al botón
+  linkedinBtn.addEventListener('click', function() {
+    // Redirigir al perfil de LinkedIn
+    window.location.href = 'https://www.linkedin.com/in/maria-isabel-a-78aa72288/';
+  });
+}
+
+// Obtener el botón por su ID
+const spotifyBtn = document.getElementById('spotifyBtn');
+
+// Verificar si el botón existe
+if (spotifyBtn) {
+  // Agregar event listener al botón
+  spotifyBtn.addEventListener('click', function() {
+    // Redirigir a la playlist de Spotify
+    window.location.href = 'https://open.spotify.com/playlist/6ZSjpRErdJCDCIO8A0SfI9?si=47b49b75258548d5&nd=1&dlsi=127d5f1195ae4f17';
+  });
+}
+
+ // Función para mostrar/ocultar el menú móvil
+ const mobileMenuButton = document.querySelector('.lg:hidden button');
+ const mobileMenu = document.querySelector('.lg:hidden [role="dialog"]');
+ if (mobileMenuButton && mobileMenu) {
+   mobileMenuButton.addEventListener('click', () => {
+     mobileMenu.classList.toggle('block');
+   });
+ }
+
+ // Función para cerrar el menú móvil al hacer clic en el fondo
+ const mobileMenuBackdrop = document.querySelector('.lg:hidden .fixed.inset-0');
+ if (mobileMenuBackdrop) {
+   mobileMenuBackdrop.addEventListener('click', () => {
+     mobileMenu.classList.remove('block');
+   });
+ }
+
+ 
+
+ // Animación de elementos al hacer scroll
+ window.addEventListener('scroll', function() {
+   document.querySelectorAll('.fade-in').forEach(function(element) {
+     if (element.getBoundingClientRect().top < window.innerHeight) {
+       element.classList.add('show');
+     }
+   });
+ });
+
+  // Envío de formulario de contacto
+  const formularioContacto = document.getElementById('formulario-contacto');
+  if (formularioContacto) {
+    formularioContacto.addEventListener('submit', (event) => {
+      event.preventDefault(); // Evita la recarga automática de la página
+
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      // Validación básica de los campos (opcional)
+      if (!nombre || !correo || !mensaje) {
+        alert('Por favor, completa todos los campos del formulario.');
+        return;
       }
-    })
-  } , sectionOneOptions);
-  sectionOneObserver.observe(sectionOne);
 
+      // Simulación de envío de datos (reemplazar con envío real)
+      console.log('Nombre:', nombre);
+      console.log('Correo:', correo);
+      console.log('Mensaje:', mensaje);
 
-// Esta función se utiliza para habilitar o deshabilitar un elemento
-function enabledisable(element) {
-  element.classList.toggle("ativo");
-}
-// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
-const token = 'BQC-i5kaO1a9W3Q0VZ7Ohd5oQ5uXtOIGHmS0Cuei6wPSCxbz0LTP3hmyOg6wpiuN1TO6zoYgd1jXmsCTgC_THXhgEWjdFzkv8iCm-hFfO6qUcH32qjqQbGJAQ73r4F_LK231oByIFBN7BtKVjch9ed7AF4lwgyekpRlcPxT8dXsMsvUSdWDMDUTIeXE4hdIY_6Ho3WiuEan0o10-nJrjKO7HtYR0OFzqGDzbtnH1D3M-fUpQlH6stwARWEeU8_R2EfIluwekGgiK_V6vjK35fOFRLJqE';
-async function fetchWebApi(endpoint, method, body) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    method,
-    body:JSON.stringify(body)
-  });
-  return await res.json();
-}
+      // Mensaje de éxito (opcional)
+      alert('¡Tu mensaje ha sido enviado correctamente!');
 
-async function getTopTracks(){
-  // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
-  return (await fetchWebApi(
-    'v1/me/top/tracks?time_range=long_term&limit=5', 'GET'
-  )).items;
-}
-
-const topTracks = await getTopTracks();
-console.log(
-  topTracks?.map(
-    ({name, artists}) =>
-      `${name} by ${artists.map(artist => artist.name).join(', ')}`
-  )
-);
-
-document.getElementById("ver-link").addEventListener("click", function(event) {
-  event.preventDefault();
-  document.getElementById("new-section").classList.toggle("hidden");
-  document.getElementById("new-section").classList.toggle("expanded");
-});
-const formularioContacto = document.getElementById('formulario-contacto');
-
-formularioContacto.addEventListener('submit', (event) => {
-  event.preventDefault(); // Evita la recarga automática de la página
-
-  const nombre = document.getElementById('nombre').value;
-  const correo = document.getElementById('correo').value;
-  const mensaje = document.getElementById('mensaje').value;
-
-  // Validación básica de los campos (opcional)
-  if (!nombre || !correo || !mensaje) {
-    alert('Por favor, completa todos los campos del formulario.');
-    return;
+      // Limpiar el formulario (opcional)
+      formularioContacto.reset();
+    });
   }
 
-  // Simulación de envío de datos (reemplazar con envío real)
-  console.log('Nombre:', nombre);
-  console.log('Correo:', correo);
-  console.log('Mensaje:', mensaje);
+  // Redes sociales
+  const redesSociales = document.querySelectorAll('.contact-social');
 
-  // Código para enviar datos a un servidor (por ejemplo, con Ajax o Fetch API)
-  // ...
-
-  // Mensaje de éxito (opcional)
-  alert('¡Tu mensaje ha sido enviado correctamente!');
-
-  // Limpiar el formulario (opcional)
-  formularioContacto.reset();
-});
-// Redirecciones
-function redirectToApiPage() {
-  window.location.href = 'api.html';
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Obtener el elemento <li> de Extension VivoDuoc
-  const vivoDuoc = document.getElementById("vivoDuoc");
-
-  // Agregar evento de clic al <li> de Extension VivoDuoc
-  vivoDuoc.addEventListener("click", function() {
-      // Redirigir a la página de Extension VivoDuoc
-      window.location.href = "https://miro.com/app/board/uXjVMizyVNs=/";
+  // Agrega un evento de clic a cada enlace de red social
+  redesSociales.forEach(redSocial => {
+    redSocial.addEventListener('click', (event) => {
+      event.preventDefault(); // Evita que el enlace redirija
+      const redSocialURL = redSocial.href;
+      window.open(redSocialURL, '_blank'); // Abre el enlace en una nueva pestaña
+    });
   });
-
-  // Aquí puedes agregar eventos de clic similares para los otros proyectos
 });

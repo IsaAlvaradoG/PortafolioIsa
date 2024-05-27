@@ -8,15 +8,11 @@
     <!-- Normalize -->
     <link rel="stylesheet" href="./assets/vendor/normalize/normalize.css">
     <!-- Font Awesome -->
-    <link href="./assets/vendor/font-awesome/fontawesome.css" rel="stylesheet" />
-    <link href="./assets/vendor/font-awesome/brands.css" rel="stylesheet" />
-    <link href="./assets/vendor/font-awesome/solid.css" rel="stylesheet" />
-    <!-- Bootstrap 5.3 -->
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="./assets/img/LAlternativo.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -27,8 +23,8 @@
       <div class="flex align-center space-x-16">
         <a href="index.html" class="text-sm font-semibold leading-6 text-white">Inicio</a>
         <a href="#hello-world" class="text-sm font-semibold leading-6 text-white">About me</a>
-        <a href="projects.html" class="text-sm font-semibold leading-6 text-white">Proyects</a>
-        <a href="#contact" class="text-sm font-semibold leading-6 text-white">Contact</a>
+        <a href="projects.html" class="text-sm font-semibold leading-6 text-white">Proyectos</a>
+        <a href="#contact" class="text-sm font-semibold leading-6 text-white">Contacto</a>
       </div>
     </nav>
   </header>
@@ -43,38 +39,87 @@
     </section>
 
     <!-- Content Section -->
-    <div id="hello-world" class="block rounded-lg bg-black shadow-lg dark:bg-neutral-700 text-left py-10">
-      <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div id="hello-world" class="block rounded-lg bg-black shadow-lg text-left py-10 lg:py-32 sm:py-48">
+      <div class="relative isolate px-6 lg:px-8">
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
           <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
         </div>
         
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="mx-auto max-w-2xl py-10 sm:py-32 lg:py-56">
           <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              About Me <a href="#" class="font-semibold text-white"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-            </div>
+            
           </div>
           <div class="text-center">
             <h1 class="text-4xl font-bold tracking-tight text-lime-500 sm:text-6xl">Hello World</h1>
             <p class="mt-6 text-lg leading-8 text-gray-300">Soy Isa Alvarado, una programadora apasionada por crear soluciones elegantes para problemas complejos. Con experiencia en lenguajes como Java, Python, SQL, HTML, CSS y JavaScript, aporto creatividad y precisión a cada proyecto. ¡Construyamos algo increíble juntos!</p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a href="projects.html" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Proyectos</a>
-              <a href="#" class="text-sm font-semibold leading-6 text-white" id="ver-link">Ver <span aria-hidden="true">→</span></a>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
     
+    <!-- Hidden Section on Small Screens -->
+    <section class="hidden lg:block">
+      <div class="container mx-auto px-4">
+        <div class="text-center py-16"> <!-- Ajuste de márgenes verticales amplios -->
+          <p class="text-lg leading-8 text-gray-300 typewriter">Un poco de mis habilidades pero si quieres verlo en la práctica ve a Projects</p>
+          
+        </div>
+
+        <!-- Skills Section -->
+        <div class="contenedor-skills" id="skills">
+          <h6 class="text-4xl font-bold tracking-tight text-lime-500 sm:text-6xl">Skills</h6>
+          <div class="skill mt-4">
+            <div class="info flex justify-between">
+              <p class="text-gray-300">Java</p>
+              <span class="porcentaje text-gray-300">95%</span>
+            </div>
+            <div class="barra bg-gray-700 rounded">
+              <div class="barra-progreso1 h-3 bg-lime-400" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div class="skill mt-4">
+            <div class="info flex justify-between">
+              <p class="text-gray-300">HTML, CSS</p>
+              <span class="porcentaje text-gray-300">82%</span>
+            </div>
+            <div class="barra bg-gray-700 rounded">
+              <div class="barra-progreso2 h-3 bg-lime-400" style="width: 82%;"></div>
+            </div>
+          </div>
+          <div class="skill mt-4">
+            <div class="info flex justify-between">
+              <p class="text-gray-300">Python</p>
+              <span class="porcentaje text-gray-300">80%</span>
+            </div>
+            <div class="barra bg-gray-700 rounded">
+              <div class="barra-progreso3 h-3 bg-lime-400" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="skill mt-4">
+            <div class="info flex justify-between">
+              <p class="text-gray-300">Bases de Datos</p>
+              <span class="porcentaje text-gray-300">75%</span>
+            </div>
+            <div class="barra bg-gray-700 rounded">
+              <div class="barra-progreso4 h-3 bg-lime-400" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="relative isolate overflow-hidden bg-black py-24 sm:py-32">
       <img src="./assets/img/F2.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-center" />
     
       <div class="container mx-auto px-4 pt-20 pb-10 sm:px-6 sm:pt-40 sm:pb-20">
         <div class="flex flex-col items-center justify-center">
-          <h2 class="text-3xl font-bold tracking-tight text-lime-500 sm:text-4xl">Contact</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-center text-justify">Si estás interesado en colaborar en algún proyecto o tienes alguna pregunta, no dudes en ponerte en contacto conmigo. Estoy disponible en diversas plataformas y estaré encantada de conectarme contigo.</p>
+          <h2 class="text-3xl font-bold tracking-tight text-lime-500 sm:text-4xl">Contacto</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-center sm:text-justify">Si estás interesado en colaborar en algún proyecto o tienes alguna pregunta, no dudes en ponerte en contacto conmigo. Estoy disponible en diversas plataformas y estaré encantada de conectarme contigo.</p>
     
           <form id="formulario-contacto" class="mt-10 w-full max-w-md flex flex-col items-center">
             <div class="w-full mb-6">
@@ -105,11 +150,10 @@
     </section>
   </main>
 
-  <!-- Bootstrap JS -->
-  <script src="./assets/vendor/bootstrap/bootstrap.js"></script>
   <!-- JQuery -->
   <script src="./assets/vendor/jquery/jquery-3.7.1.min.js"></script>
   <!-- Scripts personalizados -->
   <script src="./assets/js/scripts.js"></script>
+  
 </body>
 </html>

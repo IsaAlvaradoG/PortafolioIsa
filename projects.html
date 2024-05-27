@@ -7,11 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isa Alvarado</title>
-    <!-- Normalize -->
-    <link rel="stylesheet" href="./assets/vendor/normalize/normalize.css">
     
-    <!-- Bootstrap 5.3 -->
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="./assets/css/project.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
@@ -21,8 +17,9 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/img/LAlternativo.png">
-    <script src="./assets/js/dropdown.js" defer></script>
+   
     <script src="./assets/js/scripts.js"></script>
+    
 
 </head>
 
@@ -238,81 +235,85 @@
           <!-- Your top mixes -->
           <section class="feedPlaylist">
             <h4 class="mb-3"><a href="#"><b>Your top mixes</b></a></h4>
-          <a class="see-all" href="#">SEE-ALL</a>
+            <a class="see-all" href="#">SEE-ALL</a>
             <br>
             <br>
             <ul class="playlists">
-             }<li>
-              <img src="./assets/img/DinoGame.png">
-              <button type="button" class="btn me-3" onclick="redirectToGitHub()">
-                <svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                  <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-                </svg>
-              </button>
-              <span>Dino Game</span>
-              <p><br>Juego cuando se te va el internet</p>
-            </li>
-            
-            
-            
-
               <li>
+                <img src="./assets/img/DinoGame.png">
+                <button id="dinoGameBtn" type="button" class="btn me-3">
+                    <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                    </svg>
+                </button>
+                <span>Dino Game</span>
+                <p><br>Juego cuando se te va el internet</p>
+               </li>
+            
+               <li>
                 <img src="./assets/img/P GZ.png">
-                <button type="button" class="btn me-3" onclick="redirectToGitHub()">
+                <button type="button" id="groundZeroBtn" class="btn me-3" onclick="redirectToGitHub('https://github.com/martinagonz/Prueba1')">
                   <svg role="img" height="24" width="24" viewBox="0 0 24 24">
                     <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
                   </svg>
                 </button>
+                
                 <span>Ground Zero Web Mix</span>
                 <p><br>EV1/Página web Grupo Zero</p>
               </li>
               
               <li>
                 <img src="./assets/img/casino.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                  <button type="button" id="casinoStyleBtn" class="btn me-3" onclick="redirectToGitHub('https://github.com/martinagonz/Prueba1')">
+                    <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                   </svg>
+                </button>
+                
                 <span>Casino Style</span>
                 <p><br>Inventario Casino Duoc con Java</p>
               </li>
 
               <li>
                 <img src="./assets/img/ED.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                <button id="empresaDesignBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
                     <path
                       d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
                     </path>
-                  </svg></button>
+                  </svg>
+                </button>
                 <span>Empresa Design</span>
                 <p><br>Diseño APP/Diseño de requisitos</p>
               </li>
+              
 
             
-                <li id="vivoDuoc">
-                    <img src="./assets/img/vivo.png">
-                    <button type="button" class="btn me-3">
-                        <svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                            <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-                        </svg>
-                    </button>
-                    <span>Extension VivoDuoc</span>
-                    <p><br>Extension App/Consejeros de carrera</p>
-                </li>
+              <li id="vivoDuoc">
+                <img src="./assets/img/vivo.png">
+                <button id="" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
+                <span>Extension VivoDuoc</span>
+                <p><br>Extension App/Consejeros de carrera</p>
+              </li>
+              
              
             
 
-              <li>
+              <li id="portafolio">
                 <img src="./assets/img/IsaSong.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="portafolioBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>Portafolio</span>
                 <p><br>CV Isa Alvarado</p>
               </li>
+              
             </ul>
           </section>
 
@@ -323,27 +324,28 @@
             <br>
             <br>
             <ul class="playlists">
-              <li>
+              <li id="vivoDuoc">
                 <img src="./assets/img/vivo.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Extension VivoDuoc </span>
+                <button id="vivoDuocBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
+                <span>Extension VivoDuoc</span>
                 <p><br>Extension App/Consejeros de carrera</p>
               </li>
 
-              <li>
+              <li id="logos">
                 <img src="./assets/img/Dlogos.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="logosBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>Logos</span>
                 <p><br>Diseño de Logos</p>
               </li>
+              
               <li>
                 <img src="./assets/img/Api.png">
                 <button type="button" class="btn me-3" onclick="redirectToApiPage()">
@@ -362,16 +364,17 @@
 
               
 
-              <li>
+              <li id="curriculum">
                 <img src="./assets/img/IsaSong.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="curriculumBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>Curriculum Vitae</span>
                 <p><br>PDF</p>
               </li>
+              
 
               
 
@@ -386,50 +389,53 @@
             <br>
             <br>
             <ul class="playlists">
-              <li>
+              <li id="instagram">
                 <img src="./assets/img/instagram.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="instagramBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>Instagram</span>
                 <p><br>@isalvaradogonzali</p>
               </li>
+              
 
-              <li>
+              <li id="github">
                 <img src="./assets/img/github.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="githubBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>GitHub</span>
                 <p><br>Repositorios</p>
               </li>
+              
 
-              <li>
+              <li id="linkedin">
                 <img src="./assets/img/linkedin.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="linkedinBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>LinkedIn</span>
                 <p><br>Contactos y redes</p>
               </li>
+              
 
-              <li>
+              <li id="spotify">
                 <img src="./assets/img/PlayProg.png">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
+                <button id="spotifyBtn" type="button" class="btn me-3">
+                  <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                  </svg>
+                </button>
                 <span>Buscas Playlist</span>
                 <p><br>Para programar?</p>
               </li>
-
+              
               
           </section>
 
@@ -575,8 +581,8 @@
       </div>
     </div>
   </div>
-  <script src="./assets/js/scripts.js"></script>
-  <script src="./assets/js/dropdown.js"></script>
+  
+  
   
 </body>
 
