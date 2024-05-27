@@ -9,8 +9,11 @@ de elementos. Sin embargo, he realizado modificaciones significativas para adapt
 - **Modificaciones**: Realizadas por mí Isa Alvarado
 
 ## Nota
+
 -Este proyecto es parte de mi evaluación en el curso de **Programación Web** y no se utiliza con fines comerciales.
+
 -Use en la mayor parte del diseño Tailwind.
+
 -Al apretar en proyectos el boton de Api weather lleva a la pagina api.html donde esta implementada.
 
 ---
